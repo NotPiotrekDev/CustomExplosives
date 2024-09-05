@@ -8,8 +8,8 @@
 		"NotPiotrekDev"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/NotPiotrekDev/CustomExplosives/blob/master/README.md",
+		"sources": "https://github.com/NotPiotrekDev/CustomExplosives"
 	},
 	"license": "MIT",
 	"icon": "assets/customexplosives/icon.png",
