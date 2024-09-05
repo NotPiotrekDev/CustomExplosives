@@ -11,7 +11,7 @@ import pl.notpiotrekdev.block.ModBlocks;
 import pl.notpiotrekdev.item.ModItems;
 
 public class ModItemGroups {
-    public static final ItemGroup CUSTOMEXPLOSIVES_GROUP = Registry.register(Registries.ITEM_GROUP, new Identifier(CustomExplosives.MOD_ID, "customexplosives"), FabricItemGroup.builder().displayName(Text.translatable("itemgroup.customexplosives")).icon(() -> new ItemStack(ModItems.SCYTHE)).entries((displayContext, entries) -> {
+    public static final ItemGroup CUSTOMEXPLOSIVES_GROUP = Registry.register(Registries.ITEM_GROUP, Identifier.of(CustomExplosives.MOD_ID, "customexplosives"), FabricItemGroup.builder().displayName(Text.translatable("itemgroup.customexplosives")).icon(() -> new ItemStack(ModItems.SCYTHE)).entries((displayContext, entries) -> {
         entries.add(ModItems.SCYTHE);
         entries.add(ModItems.FLARE);
 

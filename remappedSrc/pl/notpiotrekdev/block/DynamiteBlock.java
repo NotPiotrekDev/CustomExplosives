@@ -7,6 +7,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LightningEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.text.Text;
@@ -34,8 +35,9 @@ public class DynamiteBlock extends TntBlock {
     }
 
     @Override
-    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+    public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
         world.createExplosion(null, pos.getX(), pos.getY(), pos.getZ(), 9f, World.ExplosionSourceType.TNT);
+        return state;
     }
 
     @Override
@@ -49,8 +51,8 @@ public class DynamiteBlock extends TntBlock {
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipType options) {
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
         tooltip.add(Text.translatable("tooltip.customexplosives.dynamite_block.tooltip"));
-        super.appendTooltip(stack, world, tooltip, options);
+        super.appendTooltip(stack, context, tooltip, options);
     }
 }

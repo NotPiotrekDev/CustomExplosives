@@ -6,29 +6,29 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
-import team.lodestar.lodestone.registry.common.particle.LodestoneParticleRegistry;
+/*import team.lodestar.lodestone.registry.common.particle.LodestoneParticleRegistry;
 import team.lodestar.lodestone.systems.easing.Easing;
 import team.lodestar.lodestone.systems.particle.builder.WorldParticleBuilder;
 import team.lodestar.lodestone.systems.particle.data.GenericParticleData;
 import team.lodestar.lodestone.systems.particle.data.color.ColorParticleData;
-import team.lodestar.lodestone.systems.particle.data.spin.SpinParticleData;
+import team.lodestar.lodestone.systems.particle.data.spin.SpinParticleData;*/
 
 import java.awt.*;
 
 public class Test extends Item {
-    public Test(Settings settings) {
+    public Test(net.minecraft.item.Item.Settings settings) {
         super(settings);
     }
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
 
-        spawnParticles(world, user);
+        //spawnParticles(world, user);
 
         return super.use(world, user, hand);
     }
 
-    public static void spawnParticles(World world, PlayerEntity player) {
+    /*public static void spawnParticles(World world, PlayerEntity player) {
         Color startingColor = new Color(100, 0, 100);
         Color endingColor = new Color(0, 100, 200);
         WorldParticleBuilder.create(LodestoneParticleRegistry.SMOKE_PARTICLE)
@@ -40,5 +40,5 @@ public class Test extends Item {
                 .addMotion(0, 0.01f, 0)
                 .enableNoClip()
                 .spawn(world, player.getX(), player.getY(), player.getZ());
-    }
+    }*/
 }

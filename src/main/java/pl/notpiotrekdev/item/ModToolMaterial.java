@@ -8,7 +8,7 @@ import net.minecraft.registry.tag.TagKey;
 import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
-    STRANGE_IRON(50000,10f, 8f, 26, () -> Ingredient.ofItems(ModItems.SCYTHE));
+    STRANGE_IRON(50000,10f, 13f, 26, () -> Ingredient.ofItems(ModItems.SCYTHE));
 
 
     private final int itemDurability;

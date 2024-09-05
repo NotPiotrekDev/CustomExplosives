@@ -1,10 +1,12 @@
 package pl.notpiotrekdev.block;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.HorizontalFacingBlock;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.tooltip.TooltipType;
@@ -24,6 +26,11 @@ public class MinerBlock extends HorizontalFacingBlock {
     public MinerBlock(Settings settings) {
         super(settings);
         this.setDefaultState(this.stateManager.getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH));
+    }
+
+    @Override
+    protected MapCodec<? extends HorizontalFacingBlock> getCodec() {
+        return null;
     }
 
     @Override
@@ -49,8 +56,8 @@ public class MinerBlock extends HorizontalFacingBlock {
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipType options) {
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
         tooltip.add(Text.translatable("tooltip.customexplosives.miner_block.tooltip"));
-        super.appendTooltip(stack, world, tooltip, options);
+        super.appendTooltip(stack, context, tooltip, options);
     }
 }

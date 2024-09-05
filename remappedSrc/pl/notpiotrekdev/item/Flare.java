@@ -1,10 +1,13 @@
 package pl.notpiotrekdev.item;
 
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.DustParticleEffect;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
@@ -12,7 +15,7 @@ import org.joml.Vector3f;
 import pl.notpiotrekdev.CustomExplosives;
 
 public class Flare extends Item {
-    public Flare(Settings settings) {
+    public Flare(net.minecraft.item.Item.Settings settings) {
         super(settings);
     }
 
@@ -29,7 +32,7 @@ public class Flare extends Item {
             world.addParticle(dustParticleEffect, user.getX(), y, user.getZ(), 0.2, 0.2, 0.2);
 
         }
-        user.getStackInHand(hand).damage(1, user, playerEntity -> playerEntity.sendToolBreakStatus(playerEntity.getActiveHand()));
+        user.getStackInHand(hand).damage(1, ((ServerWorld) user.getWorld()), ((ServerPlayerEntity) user), item -> user.sendEquipmentBreakStatus(user.getStackInHand(hand).getItem(), EquipmentSlot.MAINHAND));
 
         return super.use(world, user, hand);
     }

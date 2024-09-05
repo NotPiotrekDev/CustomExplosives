@@ -1,22 +1,23 @@
 package pl.notpiotrekdev.item;
 
+import net.minecraft.block.Block;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.tag.TagKey;
 
 import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
-    STRANGE_IRON(5, 50000,10f, 8f, 26, () -> Ingredient.ofItems(ModItems.SCYTHE));
+    STRANGE_IRON(50000,10f, 8f, 26, () -> Ingredient.ofItems(ModItems.SCYTHE));
 
-    private final int miningLevel;
+
     private final int itemDurability;
     private final float miningSpeed;
     private final float attackDamage;
     private final int enchantability;
     private final Supplier<Ingredient> repairIngredient;
 
-    ModToolMaterial(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
-        this.miningLevel = miningLevel;
+    ModToolMaterial(int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
         this.itemDurability = itemDurability;
         this.miningSpeed = miningSpeed;
         this.attackDamage = attackDamage;
@@ -40,11 +41,6 @@ public enum ModToolMaterial implements ToolMaterial {
     }
 
     @Override
-    public int getMiningLevel() {
-        return this.miningLevel;
-    }
-
-    @Override
     public int getEnchantability() {
         return this.enchantability;
     }
@@ -52,5 +48,10 @@ public enum ModToolMaterial implements ToolMaterial {
     @Override
     public Ingredient getRepairIngredient() {
         return this.repairIngredient.get();
+    }
+
+    @Override
+    public TagKey<Block> getInverseTag() {
+        return null;
     }
 }

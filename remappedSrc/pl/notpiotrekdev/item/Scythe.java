@@ -12,14 +12,13 @@ import net.minecraft.util.Formatting;
 
 public class Scythe extends SwordItem {
 
-    public Scythe(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
-        super(toolMaterial, attackDamage, attackSpeed, settings);
+    public Scythe(ToolMaterial toolMaterial, net.minecraft.item.Item.Settings settings) {
+        super(toolMaterial, settings);
     }
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        if (target instanceof PlayerEntity) {
-            PlayerEntity player = (PlayerEntity) target;
+        if (target instanceof PlayerEntity player) {
             if (!player.hasStatusEffect(StatusEffects.WITHER)) {
                 player.sendMessage(Text.literal("You feel a little strange..").formatted(Formatting.DARK_GRAY), true);
             }
