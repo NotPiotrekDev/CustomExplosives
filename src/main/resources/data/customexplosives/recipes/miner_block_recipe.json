@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:tnt"
+    },
+    "H": {
+      "item": "minecraft:redstone_torch"
+    },
+    "D": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "pattern": [
+    "###",
+    "HDH",
+    "###"
+  ],
+  "result": {
+    "item": "customexplosives:miner_block"
+  }
+}

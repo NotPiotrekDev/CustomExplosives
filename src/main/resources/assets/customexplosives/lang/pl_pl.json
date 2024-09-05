@@ -1,0 +1,12 @@
+{
+  "item.customexplosives.scythe": "Kosa",
+  "item.customexplosives.flare": "Flara",
+
+  "block.customexplosives.dynamite_block": "Blok Dynamitu",
+  "block.customexplosives.miner_block": "Kopacz",
+
+  "tooltip.customexplosives.dynamite_block.tooltip": "Aktywuje sie po wejsciu na niego lub zniszczeniu lub wlaczeniu",
+  "tooltip.customexplosives.miner_block.tooltip": "Aktywuje sie po polozeniu",
+
+  "itemgroup.customexplosives": "Custom Explosives"
+}

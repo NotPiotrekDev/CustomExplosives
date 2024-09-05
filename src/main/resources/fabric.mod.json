@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "customexplosives",
+	"version": "${version}",
+	"name": "CustomExplosives",
+	"description": "Very cool plugin with custom items",
+	"authors": [
+		"NotPiotrekDev"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/customexplosives/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"pl.notpiotrekdev.CustomExplosives"
+		],
+		"client": [
+			"pl.notpiotrekdev.CustomExplosivesClient"
+		],
+		"fabric-datagen": [
+			"pl.notpiotrekdev.CustomExplosivesDataGenerator"
+		]
+	},
+	"mixins": [
+		"customexplosives.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

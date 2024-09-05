@@ -1,0 +1,12 @@
+{
+  "item.customexplosives.scythe": "Scythe",
+  "item.customexplosives.flare": "Flare",
+
+  "block.customexplosives.dynamite_block": "Dynamite Block",
+  "block.customexplosives.miner_block": "Miner Block",
+
+  "tooltip.customexplosives.dynamite_block.tooltip": "Activates after being stepped or powered or destroyed",
+  "tooltip.customexplosives.miner_block.tooltip": "Activates after being placed",
+
+  "itemgroup.customexplosives": "Custom Explosives"
+}

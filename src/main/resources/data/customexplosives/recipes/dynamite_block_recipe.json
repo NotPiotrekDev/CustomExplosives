@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:tnt"
+    },
+    "E": {
+      "item": "minecraft:oak_pressure_plate"
+    },
+    "H": {
+      "item": "minecraft:redstone_torch"
+    },
+    "D": {
+      "item": "minecraft:pink_wool"
+    }
+  },
+  "pattern": [
+    "#D#",
+    "#E#",
+    "#H#"
+  ],
+  "result": {
+    "item": "customexplosives:dynamite_block"
+  }
+}
