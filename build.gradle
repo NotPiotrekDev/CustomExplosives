@@ -43,7 +43,9 @@ dependencies {
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	modImplementation "curse.maven:lodestone-616457:5458337"
+	//modImplementation "curse.maven:lodestone-616457:5458337"
+
+
 	// Ensure the correct dependency for porting_lib
 	// Remove this if it continues to cause issues
 	// modImplementation "io.github.fabricators_of_create:porting_lib:1.0.0"
